@@ -1,0 +1,2 @@
+C:/Desenvolvimento/Flutter/rentail-main/android/app/.cxx/Debug/5e6s4c3q/x86/CMakeFiles/edit_cache.dir
+C:/Desenvolvimento/Flutter/rentail-main/android/app/.cxx/Debug/5e6s4c3q/x86/CMakeFiles/rebuild_cache.dir
