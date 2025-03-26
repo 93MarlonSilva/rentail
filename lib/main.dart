@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:rentail/presentation/pages/onboarding_page.dart';
 
 import 'firebase_options.dart';
-import 'onboarding_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
