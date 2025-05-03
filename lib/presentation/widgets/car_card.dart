@@ -17,6 +17,7 @@ class CarCard extends StatelessWidget {
           Text(car.model, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           SizedBox(height: 10),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
@@ -25,6 +26,11 @@ class CarCard extends StatelessWidget {
                       Image.asset('assets/gps.png')
                     ],
                   )
+                ],
+              ), Row(
+                children: [
+                  Image.asset('assets/pump.png'),
+                  Text('${car.fuelCapacity.toStringAsFixed(0)}L')
                 ],
               )
             ],
