@@ -8,9 +8,21 @@ class CarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+      child: Container(
       margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: Color(0xffF3F3F3),
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 10,
+            spreadRadius: 5
+          )
+        ]
+      ),
       child: Column(
         children: [
           Image.asset('assets/car_image.png', height: 120),
@@ -32,11 +44,15 @@ class CarCard extends StatelessWidget {
                   Image.asset('assets/pump.png'),
                   Text('${car.fuelCapacity.toStringAsFixed(0)}L')
                 ],
+              ),
+              Text('\$${car.pricePerHour.toStringAsFixed(2)}/h',
+              style: TextStyle(fontSize: 16),
               )
             ],
           )
         ],
       ),
+      )
     );
   }
 }
