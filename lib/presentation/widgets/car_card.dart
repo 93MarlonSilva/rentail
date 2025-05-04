@@ -13,7 +13,7 @@ class CarCard extends StatelessWidget {
       padding: EdgeInsets.all(20),
       child: Column(
         children: [
-          Image.asset('asset/car_image.png', height: 120),
+          Image.asset('assets/car_image.png', height: 120),
           Text(car.model, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
           SizedBox(height: 10),
           Row(
