@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentail/presentation/widgets/car_card.dart';
 
 import '../../data/models/car.dart';
+import 'card_details_page.dart';
 
 class CarListScreen extends StatelessWidget {
   final List<Car> cars = [
@@ -21,9 +22,19 @@ class CarListScreen extends StatelessWidget {
         body: ListView.builder(
             itemCount: cars.length,
             itemBuilder: (context, index) {
-              return CarCard(car: cars[index]);
-
-        },
+              final car = cars[index];
+              return GestureDetector(
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (context) => CardDetailsPage(
+                  car: car,
+                  ),
+                ),
+              ),
+            child: CarCard(car: car),
+        );
+       },
       ),
     );
   }
