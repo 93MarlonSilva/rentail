@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rentail/presentation/widgets/car_card.dart';
 
 import '../../data/models/car.dart';
-import 'card_details_page.dart';
+import 'car_details_page.dart';
 
 class CarListScreen extends StatelessWidget {
   final List<Car> cars = [
@@ -27,7 +27,7 @@ class CarListScreen extends StatelessWidget {
                 onTap: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                  builder: (context) => CardDetailsPage(
+                  builder: (context) => CarDetailsPage(
                   car: car,
                   ),
                 ),

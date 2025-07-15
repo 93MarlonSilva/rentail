@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
+import '../../data/models/car.dart';
+
 class MapsDetailsPage extends StatelessWidget {
-  const MapsDetailsPage({super.key});
+  final Car car;
+  const MapsDetailsPage({super.key, required this.car});
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +35,15 @@ class MapsDetailsPage extends StatelessWidget {
               bottom: 0,
               left: 0,
               right: 0,
-              child: carDatailsCard())
+              child: carDetailsCard(car: car),
+          )
         ],
       ),
     );
   }
 }
 
-Widget carDatailsCard() {
+Widget carDetailsCard({required Car car}) {
   return SizedBox(
     height: 350,
     child: Stack(
@@ -56,22 +60,21 @@ Widget carDatailsCard() {
             boxShadow: [
               BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 10)
             ]
-              
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 20,),
-              Text('car.model', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
+              Text(car.model, style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white),),
               SizedBox(height: 10,),
               Row(
                 children: [
                   Icon(Icons.directions_car, color: Colors.white, size: 16),
                   SizedBox(width: 5,),
-                  Text('> car.distance km', style: TextStyle(color: Colors.white, fontSize: 14),),
+                  Text('> ${car.distance} km', style: TextStyle(color: Colors.white, fontSize: 14),),
                   SizedBox(width: 10,),
                   Icon(Icons.battery_full, color: Colors.white, size: 14,),
-                  Text('car.fuelCapacity', style: TextStyle(color: Colors.white, fontSize: 14),)
+                  Text(car.fuelCapacity.toString(), style: TextStyle(color: Colors.white, fontSize: 14),)
                 ],
               )
 
@@ -100,7 +103,7 @@ Widget carDatailsCard() {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('\$car.pricePerHour/day', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+                    Text('\$ ${car.pricePerHour}/day', style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
                     ElevatedButton(onPressed: () {},
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
                         child: Text('Book Now', style: TextStyle(color: Colors.white),))
@@ -108,8 +111,12 @@ Widget carDatailsCard() {
                 )
               ],
             ),
-        ))
-
+          ),
+        ),
+        Positioned(
+            top: 50,
+            right: 20,
+            child: Image.asset('assets/white_car.png'))
       ],
     ),
   );
