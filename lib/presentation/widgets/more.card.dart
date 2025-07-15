@@ -23,8 +23,10 @@ class MoreCard extends StatelessWidget {
         ]
       ),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(car.model,
               style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
@@ -47,7 +49,6 @@ class MoreCard extends StatelessWidget {
               )
             ],
           ),
-          Spacer(),
           Icon(Icons.arrow_forward_ios, color: Colors.white, size: 24)
         ],
       ),

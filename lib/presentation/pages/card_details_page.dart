@@ -3,6 +3,8 @@ import 'package:rentail/data/models/car.dart';
 import 'package:rentail/presentation/widgets/car_card.dart';
 import 'package:rentail/presentation/widgets/more.card.dart';
 
+import 'maps_details_page.dart';
+
 class CardDetailsPage extends StatelessWidget {
   final Car car;
   const CardDetailsPage({super.key, required this.car});
@@ -52,24 +54,33 @@ class CardDetailsPage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 16),
-                Expanded(
-                  child: Container(
-                    height: 170,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        image: DecorationImage(
-                            image: AssetImage('assets/maps.png'),
-                            fit: BoxFit.cover
+                   Expanded(
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                      builder: (context) => MapsDetailsPage()
+                      )),
+                      child: Container(
+                        height: 170,
+                        decoration: BoxDecoration(
+
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                                image: AssetImage('assets/maps.png'),
+                                fit: BoxFit.cover
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+                                  spreadRadius: 5
+                              )
+                            ]
                         ),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.black12,
-                              blurRadius: 10,
-                              spreadRadius: 5
-                          )
-                        ]
+                      ),
                     ),
-                  ),
+
                 )
               ],
             ),
