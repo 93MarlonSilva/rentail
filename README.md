@@ -1,35 +1,33 @@
 # rentail
 
-
-
-Este app foi criado para treinar minhas skillz em:
+This app was created to practice my skills in:
 
 - **Flutter**
 - **Clean Architecture**
 - **UI**
 - **Firebase Firestore Database**
-- **Bloc (gerenciamento de estado)**
+- **Bloc (state management)**
 - **Google Maps**
 
-## Sobre
+## About
 
-Projeto focado em aprender e praticar arquitetura limpa, integração com Firebase, gerenciamento de estado com Bloc, construção de interfaces modernas e uso de mapas no Flutter.
+Experimental project focused on learning and practicing clean architecture, Firebase integration, state management with Bloc, building modern interfaces, and using maps in Flutter.
 
-## Como rodar
+## How to run
 
-1. Clone o repositório:
+1. Clone the repository:
    ```bash
-   git clone <url-do-repo>
+   git clone <repo-url>
    ```
-2. Instale as dependências:
+2. Install dependencies:
    ```bash
    flutter pub get
    ```
-3. Execute o app:
+3. Run the app:
    ```bash
    flutter run
    ```
 
-![Demonstração do app](assets/gitimage.png)
+![App demo](assets/gitimage.png)
 
 
