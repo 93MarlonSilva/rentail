@@ -119,11 +119,11 @@ class _CarDetailsPageState extends State<CarDetailsPage> with SingleTickerProvid
           Container(
             padding: EdgeInsets.all(20),
             child: Column(
-              spacing: 8,
+              spacing: 12,
               children: [
-                MoreCard(car: Car(model: '${widget.car.model} 1', distance: widget.car.distance + 100, fuelCapacity: widget.car.fuelCapacity + 100, pricePerHour: widget.car.pricePerHour + 100)),
-                MoreCard(car: Car(model: '${widget.car.model} 2', distance: widget.car.distance + 200, fuelCapacity: widget.car.fuelCapacity + 200, pricePerHour: widget.car.pricePerHour + 200)),
-                MoreCard(car: Car(model: '${widget.car.model} 3', distance: widget.car.distance + 300, fuelCapacity: widget.car.fuelCapacity + 300, pricePerHour: widget.car.pricePerHour + 300)),
+                MoreCard(car: Car(model: '${widget.car.model} 1', distance: widget.car.distance + 100, fuelCapacity: double.parse((widget.car.fuelCapacity + 100).toStringAsFixed(2)), pricePerHour: widget.car.pricePerHour)),
+                MoreCard(car: Car(model: '${widget.car.model} 2', distance: widget.car.distance + 200, fuelCapacity: double.parse((widget.car.fuelCapacity + 200).toStringAsFixed(2)), pricePerHour: widget.car.pricePerHour + 200)),
+                MoreCard(car: Car(model: '${widget.car.model} 3', distance: widget.car.distance + 300, fuelCapacity: double.parse((widget.car.fuelCapacity + 300).toStringAsFixed(2)), pricePerHour: widget.car.pricePerHour + 300)),
               ],
             ),
           )
