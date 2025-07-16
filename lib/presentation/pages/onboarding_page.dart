@@ -45,7 +45,7 @@ class OnboardingPage extends StatelessWidget {
                         foregroundColor: Colors.black,
                         backgroundColor: Colors.white,
                       ),
-                        child: Text('Let\s Go',
+                        child: Text('Let\'s Go',
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                         ),
                     ),

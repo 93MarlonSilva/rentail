@@ -11,7 +11,7 @@ This app was created to practice my skills in:
 
 ## About
 
-Experimental project focused on learning and practicing clean architecture, Firebase integration, state management with Bloc, building modern interfaces, and using maps in Flutter.
+Experimental project focused on learning and practicing clean architecture, Firebase integration, state management with Bloc, building modern interfaces, tests, and using maps in Flutter.
 
 ## How to run
 
